@@ -41,6 +41,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    right: 1%;
   }
   .contenedor-header_div a {
     text-decoration: none;
@@ -73,9 +75,8 @@
   .contenedor-nav_menu {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color: beige;
     width: 60%;
   }
   .contenedor-nav_menu li {

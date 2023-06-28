@@ -17,8 +17,8 @@
             "header     header      header"
             "menu-nav   menu-nav    menu-nav"
             "banner     banner      banner"
+        }
     }
-}
 @media screen and (min-width: 915px) {
     .grid-index {
         display: grid;
@@ -47,6 +47,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            right: 1%;
             a {
                 text-decoration: none;
                 font-family: 'Montserrat', cursive;
@@ -80,9 +82,9 @@
         &_menu {
             list-style-type: none;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            background-color: beige;
+            
             width:60%;
             li {
                 transition: all 0.3s;
