@@ -4,30 +4,22 @@
     box-sizing: border-box;
 }
 
-*ul{
-    padding: 0 !important;  /*Para evitar el formato de bs*/       
-    margin: 0 !important;   /*Para evitar el formato de bs*/      
+*ul {
+    padding: 0 !important;
+    /*Para evitar el formato de bs*/
+    margin: 0 !important;
+    /*Para evitar el formato de bs*/
 }
-@media screen and (max-width: 915px) {
+
+@media screen and (max-width: 600px) {
     .grid-index {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 10vh auto max-content;
         grid-template-areas:
-            "header     header      header"
-            "menu-nav   menu-nav    menu-nav"
-            "banner     banner      banner"
-        }
-    }
-@media screen and (min-width: 915px) {
-    .grid-index {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 10vh auto max-content;
-        grid-template-areas:
-            "header     header      header"
-            "menu-nav   menu-nav    menu-nav"
-            "banner     banner      banner"
+            "header"
+            "menu-nav"
+            "banner"
     }
 
     .contenedor-header {
@@ -35,20 +27,18 @@
         background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
         background-size: cover;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         z-index: 2;
         position: sticky;
-        top: 0;
 
         &_div {
-            transition: all 0.3s;
             height: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            position: relative;
-            right: 1%;
+
             a {
                 text-decoration: none;
                 font-family: 'Montserrat', cursive;
@@ -56,61 +46,110 @@
                 color: rgb(255, 160, 150);
                 position: relative;
             }
-            img {
-                width: 70px;
-                height: 70px;
-            }
+
+        }
+    }
+    #carouselExampleFade{
+        display: none;
+    }
+}
+
+
+.grid-index {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh auto auto;
+    grid-template-areas:
+        "header     header      header"
+        "menu-nav   menu-nav    menu-nav"
+        "banner     banner      banner"
+}
+
+.contenedor-header {
+    grid-area: header;
+    background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: sta;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+
+    &_div {
+        transition: all 0.3s;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        right: 1%;
+
+        a {
+            height: 70px;
+            text-decoration: none;
+            font-family: 'Dancing Script', cursive;
+            font-size: 48pt;
+            color: rgb(255, 160, 150);
+        }
+
+        img {
+            vertical-align: 0;
+            width: 70px;
+            height: 70px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.contenedor-nav {
+    grid-area: menu-nav;
+    height: auto;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 10vh;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    border-color: black;
+    z-index: 2;
+
+    &_menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 60%;
+
+        li {
+            transition: all 0.3s;
+            margin-inline: 0;
+            flex-direction: column;
+
             &:hover {
                 transform: scale(1.1);
             }
-        }
-    }
 
-    .contenedor-nav {
-        grid-area: menu-nav;
-        height: auto;
-        background-color: whitesmoke;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: sticky;
-        top: 10vh;
-        border-top-style: groove;
-        border-bottom-style: groove;
-        border-color: black;
-        z-index: 2;
-        &_menu {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            
-            width:60%;
-            li {
+            a {
+                
+                width: fit-content;
+                font-size: 18pt;
+                font-family: Montserrat, cursive;
+                text-decoration: none;
                 transition: all 0.3s;
-                margin-inline: 0;
-                flex-direction: column;
+                color: #C18174;
 
                 &:hover {
-                    transform: scale(1.1);
-                }
-
-                a {
-                    padding: 0;
-                    width: fit-content;
-                    font-size: 18pt;
-                    font-family: Montserrat, cursive;
-                    text-decoration: none;
-                    transition: all 0.3s;
-                    color: #C18174;
-
-                    &:hover {
-                        color: rgb(255, 160, 150);
-                    }
+                    color: rgb(255, 160, 150);
                 }
             }
         }
     }
-
-
 }
