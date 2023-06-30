@@ -54,12 +54,12 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 660px) {
 
     .grid-index {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 10vh 5vh auto auto auto;
+        grid-template-rows: 75px auto auto auto auto;
         grid-template-areas:
             "header     header"
             "menu-nav   menu-nav"
@@ -84,7 +84,6 @@
             width: 100%;
             transition: all 0.3s;
             display: flex;
-            flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
             position: relative;
@@ -118,13 +117,13 @@
 
     .contenedor-nav {
         grid-area: menu-nav;
-        height: auto;
+        height: max-content;
         background-color: whitesmoke;
         display: flex;
         justify-content: center;
         align-items: center;
         position: sticky;
-        top: 10vh;
+        top: 75px;
         border-bottom-style: solid;
         border-color: rgb(217, 112, 112);
         z-index: 2;
@@ -132,14 +131,15 @@
         &_menu {
             list-style-type: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            width: 60%;
-
+            width: 80%;
+            
             li {
                 transition: all 0.3s;
                 margin-inline: 0;
                 flex-direction: column;
+                margin-inline: 2rem;
 
                 &:hover {
                     transform: scale(1.1);
@@ -147,15 +147,15 @@
 
                 a {
 
-                    width: fit-content;
-                    font-size: 18pt;
+                    width: 100%;
+                    font-size: 1rem;
                     font-family: Montserrat, cursive;
                     text-decoration: none;
                     transition: all 0.3s;
                     color: #C18174;
 
                     &:hover {
-                        color: rgb(255, 160, 150);
+                        color: rgb(223, 177, 172);
                     }
                 }
             }
@@ -164,7 +164,7 @@
 
     .destacados {
         grid-area: destacados;
-        background-color: whitesmoke;
+        background-color: rgba(172, 51, 51, 0.507);//rgb(223, 182, 182);// rgb(172, 51, 51)
         width: 100%;
         display: flex;
         justify-content: center;
@@ -179,9 +179,11 @@
                 transition: all 0.3s;
                 opacity: 1;
                 border-radius: 20% 10%;
-                width: 35vh;
-                height: 35vh;
-                margin: 1rem;
+                width: 160px;
+                height: 160px;
+                margin-inline: 2rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
                 border-color: silver;
                 border-style: solid;
                 border-width: lvw;
@@ -198,7 +200,8 @@
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        background-color: #303030;
+        background-color: darkslategrey;
+
         color: #fff;
         font-size: 14px;
 
