@@ -56,10 +56,14 @@
 
 @media screen and (min-width: 660px) {
 
+    body{
+        background-color: rgb(255, 239, 212);
+    }
+
     .grid-index {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 75px auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px auto auto auto 10vh;
         grid-template-areas:
             "header     header"
             "menu-nav   menu-nav"
@@ -148,7 +152,7 @@
                 a {
 
                     width: 100%;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     font-family: Montserrat, cursive;
                     text-decoration: none;
                     transition: all 0.3s;
@@ -162,10 +166,21 @@
         }
     }
 
+    div.carousel-inner{
+        display: flex;
+    }
+    #carouselExampleFade {
+        background-color: crimson;
+        width: 80%;
+        left: 10%;
+    }
+
     .destacados {
         grid-area: destacados;
-        background-color: rgba(172, 51, 51, 0.507);//rgb(223, 182, 182);// rgb(172, 51, 51)
-        width: 100%;
+        background-color: rgba(250, 223, 220, 0.579);//rgb(223, 182, 182);// rgb(172, 51, 51)
+        width: 80%;
+        position: relative;
+        left: 10%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -197,13 +212,16 @@
     .footer {
         grid-area: footer;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         background-color: darkslategrey;
-
+        width: 100%;
         color: #fff;
         font-size: 14px;
+        p{
+            margin-bottom: 0;
+        }
 
         a{
             text-decoration: none;
