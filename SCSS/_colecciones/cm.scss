@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) {
+    .grid-cm{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh auto auto ;
+    }
+    
+}

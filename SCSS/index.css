@@ -50,7 +50,7 @@
   .grid-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh auto auto;
+    grid-template-rows: 10vh 5vh auto auto auto;
     grid-template-areas: "header     header" "menu-nav   menu-nav" "banner     banner" "destacados destacados" "footer     footer";
   }
   .contenedor-header {
@@ -58,7 +58,6 @@
     background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
     background-size: cover;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -67,8 +66,8 @@
     top: 0;
   }
   .contenedor-header_div {
+    width: 100%;
     transition: all 0.3s;
-    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -85,12 +84,12 @@
   }
   .contenedor-header_div img {
     margin-right: 1rem;
-    border-color: rgb(255, 160, 150);
-    border-radius: 50%;
-    border-style: groove;
-    vertical-align: 0;
+    border-color: silver;
+    border-style: solid;
     width: 70px;
+    border-radius: 50%;
     height: 70px;
+    vertical-align: top;
   }
   .contenedor-header_div:hover {
     transform: scale(1.1);
@@ -104,8 +103,7 @@
     align-items: center;
     position: sticky;
     top: 10vh;
-    border-top-style: groove;
-    border-bottom-style: groove;
+    border-bottom-style: solid;
     border-color: rgb(217, 112, 112);
     z-index: 2;
   }
@@ -138,31 +136,46 @@
   }
   .destacados {
     grid-area: destacados;
-    width: 80%;
-    position: relative;
-    left: 10%;
+    background-color: whitesmoke;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .destacados_div {
-    margin-top: 10px;
-    padding-inline: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
   }
   .destacados_div img {
+    transition: all 0.3s;
+    opacity: 1;
     border-radius: 20% 10%;
-    width: 260px;
-    height: 260px;
+    width: 35vh;
+    height: 35vh;
+    margin: 1rem;
+    border-color: silver;
+    border-style: solid;
+    border-width: lvw;
+  }
+  .destacados_div img:hover {
+    opacity: 0.5;
   }
   .footer {
     grid-area: footer;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    background-color: #333;
+    background-color: #303030;
     color: #fff;
-    text-align: center;
     font-size: 14px;
+  }
+  .footer a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(80, 239, 183);
   }
 }/*# sourceMappingURL=index.css.map */
