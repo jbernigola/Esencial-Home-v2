@@ -17,22 +17,22 @@
     border-style: solid;
     border-color: silver;
     border-radius: 20ch;
-    background-image: url(../_IMAGENES/banner-kitchen.jpg);
+    background-image: url(../img/banner-kitchen.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .card-img-overlay {
-
-    h5,p{
+    h5,p {
         position: relative;
         left: 10%;
         font-family: "Montserrat", cursive;
         color: darkblue;
     }
-    .card-img{
+
+    .card-img {
         display: none;
-        object-fit: cover;
+        object-fit: contain;
     }
 }
 
@@ -42,8 +42,9 @@
     align-items: center;
     margin: 15px;
     flex-direction: column;
-    div{
-        margin:15px;
+
+    div {
+        margin: 15px;
     }
 }
 
@@ -60,7 +61,7 @@
 
     .contenedor-header {
         grid-area: header;
-        background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
+        background: url(../img/Banner-Esencial-Vacio.png);
         background-size: cover;
         display: flex;
         justify-content: space-around;
@@ -111,7 +112,7 @@
 
     .contenedor-header {
         grid-area: header;
-        background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
+        background: url(../img/Banner-Esencial-Vacio.png);
         background-size: cover;
         display: flex;
         justify-content: center;

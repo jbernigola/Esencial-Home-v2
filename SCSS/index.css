@@ -17,7 +17,7 @@
   border-style: solid;
   border-color: silver;
   border-radius: 20ch;
-  background-image: url(../_IMAGENES/banner-kitchen.jpg);
+  background-image: url(../img/banner-kitchen.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -30,8 +30,8 @@
 }
 .card-img-overlay .card-img {
   display: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .categorias {
@@ -54,7 +54,7 @@
   }
   .contenedor-header {
     grid-area: header;
-    background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
+    background: url(../img/Banner-Esencial-Vacio.png);
     background-size: cover;
     display: flex;
     justify-content: space-around;
@@ -92,7 +92,7 @@
   }
   .contenedor-header {
     grid-area: header;
-    background: url(../_IMAGENES/Banner-Esencial-Vacio.png);
+    background: url(../img/Banner-Esencial-Vacio.png);
     background-size: cover;
     display: flex;
     justify-content: center;
