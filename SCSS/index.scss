@@ -11,6 +11,43 @@
     /*Para evitar el formato de bs*/
 }
 
+#card-text-bg {
+    width: 80%;
+    height: 300px;
+    border-style: solid;
+    border-color: silver;
+    border-radius: 20ch;
+    background-image: url(../_IMAGENES/banner-kitchen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-overlay {
+
+    h5,p{
+        position: relative;
+        left: 10%;
+        font-family: "Montserrat", cursive;
+        color: darkblue;
+    }
+    .card-img{
+        display: none;
+        object-fit: cover;
+    }
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    flex-direction: column;
+    div{
+        margin:15px;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     .grid-index {
         display: grid;
@@ -56,7 +93,7 @@
 
 @media screen and (min-width: 660px) {
 
-    body{
+    body {
         background-color: rgb(255, 239, 212);
     }
 
@@ -138,7 +175,7 @@
             justify-content: center;
             align-items: center;
             width: 80%;
-            
+
             li {
                 transition: all 0.3s;
                 margin-inline: 0;
@@ -166,18 +203,18 @@
         }
     }
 
-    div.carousel-inner{
+    div.carousel-inner {
         display: flex;
     }
+
     #carouselExampleFade {
-        background-color: crimson;
         width: 80%;
         left: 10%;
     }
 
     .destacados {
         grid-area: destacados;
-        background-color: rgba(250, 223, 220, 0.579);//rgb(223, 182, 182);// rgb(172, 51, 51)
+        background-color: rgba(250, 223, 220, 0.579); //rgb(223, 182, 182);// rgb(172, 51, 51)
         width: 80%;
         position: relative;
         left: 10%;
@@ -185,6 +222,7 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+
         &_div {
             width: fit-content;
             display: flex;
@@ -202,6 +240,7 @@
                 border-color: silver;
                 border-style: solid;
                 border-width: lvw;
+
                 &:hover {
                     opacity: 0.5;
                 }
@@ -219,13 +258,14 @@
         width: 100%;
         color: #fff;
         font-size: 14px;
-        p{
+
+        p {
             margin-bottom: 0;
         }
 
-        a{
+        a {
             text-decoration: none;
-            font-style:italic;
+            font-style: italic;
             color: rgb(80, 239, 183)
         }
     }
