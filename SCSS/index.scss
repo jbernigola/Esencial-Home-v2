@@ -1,3 +1,5 @@
+$body-color: red;
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@
     /*Para evitar el formato de bs*/
 }
 
+
 #card-text-bg {
     width: 80%;
     height: 300px;
@@ -22,7 +25,9 @@
 }
 
 .card-img-overlay {
-    h5,p {
+
+    h5,
+    p {
         position: relative;
         left: 10%;
         font-family: "Montserrat", cursive;
@@ -39,18 +44,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin-top: 60px;
     flex-direction: column;
-    &-div{
+
+    &-div {
         display: flex;
-        width:750px;
-        height: 200px;
-        margin-bottom: 20px;
+        justify-content: flex-start;
+        width: 750px;
+        height: auto;
+        margin-bottom: 50px;
         box-shadow: 5px 8px 25px darksalmon;
-        img{
+
+        img {
             width: 100%;
-            height: 100%;            
-        }        
+            height: 100%;
+        }
     }
 }
 
@@ -59,11 +67,13 @@
     .grid-index {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 10vh auto max-content;
+        grid-template-rows: 60px auto auto max-content auto;
         grid-template-areas:
             "header"
             "menu-nav"
+            "banner"
             "destacados"
+            "footer"
     }
 
     .contenedor-header {
@@ -72,13 +82,13 @@
         background-size: cover;
         display: flex;
         justify-content: space-around;
-        align-items: first baseline;
-        flex-direction: row;
+        flex-direction: column;
         z-index: 2;
         position: sticky;
 
         &_div {
             width: 100%;
+            height: 60px;
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -90,6 +100,7 @@
                 font-size: 24pt;
                 color: rgb(255, 160, 150);
             }
+
             img {
                 margin-right: 0;
                 border-color: silver; //rgb(255, 160, 150)
@@ -102,9 +113,10 @@
         }
 
     }
+
     .contenedor-nav {
         grid-area: menu-nav;
-        height: max-content;
+        height: 75px;
         background-color: whitesmoke;
         display: flex;
         justify-content: center;
@@ -122,12 +134,10 @@
             align-items: center;
             width: 100%;
             flex-direction: column;
+
             li {
                 transition: all 0.3s;
 
-                &:hover {
-                    transform: scale(1.1);
-                }
 
                 a {
 
@@ -182,21 +192,71 @@
         }
     }
 
-    #carouselExampleFade {
-        display: none;
+    .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: darkslategrey;
+        width: 100%;
+        color: #fff;
+        font-size: 14px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-style: italic;
+            color: rgb(80, 239, 183)
+        }
     }
+
+    #carouselExampleFade {
+        display: flex;
+    }
+
+    .categorias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        flex-direction: column;
+
+        &-div {
+            display: flex;
+            width: 400px;
+            height: 150px;
+            margin-bottom: 60px;
+            box-shadow: 5px 8px 25px darksalmon;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: .8;
+                transition: all 0.3s;
+
+                &:hover{
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+}
+
+body {
+    background-color: rgb(255, 239, 212);
 }
 
 @media screen and (min-width: 760px) {
 
-    body {
-        background-color: rgb(255, 239, 212);
-    }
-
     .grid-index {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 75px auto auto auto 10vh;
+        grid-template-rows: 75px auto auto auto 15vh;
         grid-template-areas:
             "header     header"
             "menu-nav   menu-nav"
@@ -299,9 +359,6 @@
         }
     }
 
-    div.carousel-inner {
-        display: flex;
-    }
 
     #carouselExampleFade {
         width: 80%;
@@ -318,25 +375,25 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
 
         &_div {
-            width: fit-content;
+            width: 160px;
+            height: 160px;
             display: flex;
-            flex-direction: row;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-inline: 1rem;
 
-            img {
+            &-img {
                 transition: all 0.3s;
                 opacity: 1;
                 border-radius: 20% 10%;
-                width: 160px;
-                height: 160px;
-                margin-inline: 2rem;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
+                width: 100%;
+                height: 100%;
                 border-color: silver;
                 border-style: solid;
-                border-width: lvw;
+                border-width: .5mm;
 
                 &:hover {
                     opacity: 0.5;
@@ -344,6 +401,35 @@
             }
         }
     }
+    
+    .categorias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        flex-direction: column;
+
+        &-div {
+            display: flex;
+            width: auto;
+            height: auto;
+            margin-bottom: 60px;
+            box-shadow: 5px 8px 25px darkgray;
+
+            img {
+                width: 750px;
+                height: 250px;
+                opacity: .7;
+                transition: all 0.3s;
+
+                &:hover{
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+
 
     .footer {
         grid-area: footer;
