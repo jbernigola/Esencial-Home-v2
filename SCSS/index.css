@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to top, #c4a6ee 0%, #fbc2eb 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -96,13 +100,13 @@
   }
   .contenedor-nav {
     grid-area: menu-nav;
-    height: 75px;
+    height: 90px;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 50px;
+    top: 60px;
     border-bottom-style: solid;
     border-color: rgb(217, 112, 112);
     z-index: 2;
@@ -117,6 +121,7 @@
   }
   .contenedor-nav_menu li {
     transition: all 0.3s;
+    margin: 3px;
   }
   .contenedor-nav_menu li a {
     width: 100%;
@@ -127,7 +132,7 @@
     color: #C18174;
   }
   .contenedor-nav_menu li a:hover {
-    color: rgb(223, 177, 172);
+    color: rgb(255, 160, 150);
   }
   .destacados {
     grid-area: destacados;
@@ -162,54 +167,67 @@
   .destacados_div img:hover {
     opacity: 0.5;
   }
-  .footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: darkslategrey;
-    width: 100%;
-    color: #fff;
-    font-size: 14px;
-  }
-  .footer p {
-    margin-bottom: 0;
-  }
-  .footer a {
-    text-decoration: none;
-    font-style: italic;
-    color: rgb(80, 239, 183);
-  }
-  #carouselExampleFade {
-    display: flex;
-  }
-  .categorias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-    flex-direction: column;
-  }
-  .categorias-div {
-    display: flex;
-    width: 400px;
-    height: 150px;
-    margin-bottom: 60px;
-    box-shadow: 5px 8px 25px darksalmon;
-  }
-  .categorias-div img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    transition: all 0.3s;
-  }
-  .categorias-div img:hover {
-    opacity: 1;
+  .carousel-item img {
+    height: 290px;
   }
 }
-body {
-  background-color: rgb(255, 239, 212);
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkslategrey;
+  color: #fff;
+  font-size: 14px;
+}
+.footer p {
+  margin-bottom: 0;
+}
+.footer a {
+  text-decoration: none;
+  font-style: italic;
+  color: rgb(80, 239, 183);
+}
+
+#carouselExampleFade {
+  display: flex;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  flex-direction: column;
+}
+.categorias-div {
+  display: flex;
+  width: 400px;
+  height: 150px;
+  margin-bottom: 60px;
+  box-shadow: 5px 8px 25px darksalmon;
+}
+.categorias-div:nth-child(1) {
+  box-shadow: 0px 0px 10px 2px darkmagenta;
+}
+.categorias-div:nth-child(2) {
+  box-shadow: 0px 0px 10px 2px darkcyan;
+}
+.categorias-div:nth-child(3) {
+  box-shadow: 0px 0px 10px 2px darkblue;
+}
+.categorias-div:nth-child(4) {
+  box-shadow: 0px 0px 10px 2px darkgoldenrod;
+}
+.categorias-div img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.categorias-div img:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 760px) {
@@ -298,7 +316,7 @@ body {
     color: #C18174;
   }
   .contenedor-nav_menu li a:hover {
-    color: rgb(223, 177, 172);
+    color: rgb(255, 160, 150);
   }
   #carouselExampleFade {
     width: 80%;
@@ -349,16 +367,33 @@ body {
     width: auto;
     height: auto;
     margin-bottom: 60px;
-    box-shadow: 5px 8px 25px darkgray;
+    box-shadow: 5px 8px 20px darkgray;
+    transition: all 0.3s;
   }
   .categorias-div img {
     width: 750px;
     height: 250px;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: all 0.3s;
   }
   .categorias-div img:hover {
     opacity: 1;
+  }
+  .categorias-div:nth-child(1):hover {
+    opacity: 1;
+    box-shadow: 0px 0px 50px 2px darkmagenta;
+  }
+  .categorias-div:nth-child(2):hover {
+    opacity: 1;
+    box-shadow: 0px 0px 50px 2px darkcyan;
+  }
+  .categorias-div:nth-child(3):hover {
+    opacity: 1;
+    box-shadow: 0px 0px 50px 2px darkblue;
+  }
+  .categorias-div:nth-child(4):hover {
+    opacity: 1;
+    box-shadow: 0px 0px 50px 2px darkgoldenrod;
   }
   .footer {
     grid-area: footer;
