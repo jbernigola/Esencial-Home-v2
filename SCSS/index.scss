@@ -87,6 +87,7 @@ body {
         flex-direction: column;
         z-index: 2;
         position: sticky;
+        top: 0;
 
         &_div {
             width: 100%;
@@ -140,6 +141,7 @@ body {
             li {
                 transition: all 0.3s;
                 margin: 3px;
+
                 a {
                     width: 100%;
                     font-size: 1rem;
@@ -192,79 +194,81 @@ body {
         }
     }
 
-    .carousel-item{
-        img{
-            height: 260px ;
+    .carousel-item {
+        img {
+            height: 260px;
         }
     }
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkslategrey;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+
+    p {
+        margin-bottom: 0;
     }
 
-    .footer {
-        grid-area: footer;
+    a {
+        text-decoration: none;
+        font-style: italic;
+        color: rgb(80, 239, 183)
+    }
+}
+
+#carouselExampleFade {
+    display: flex;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    flex-direction: column;
+
+    &-div {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: darkslategrey;
-        color: #fff;
-        font-size: 14px;
+        width: 400px;
+        height: 150px;
+        margin-bottom: 60px;
+        box-shadow: 5px 8px 25px darksalmon;
 
-        p {
-            margin-bottom: 0;
+        &:nth-child(1) {
+            box-shadow: 0px 0px 10px 2px darkmagenta;
         }
 
-        a {
-            text-decoration: none;
-            font-style: italic;
-            color: rgb(80, 239, 183)
+        &:nth-child(2) {
+            box-shadow: 0px 0px 10px 2px darkcyan;
         }
-    }
 
-    #carouselExampleFade {
-        display: flex;
-    }
+        &:nth-child(3) {
+            box-shadow: 0px 0px 10px 2px rgb(162, 215, 222);
+        }
 
-    .categorias {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px;
-        flex-direction: column;
+        &:nth-child(4) {
+            box-shadow: 0px 0px 10px 2px darkgoldenrod;
+        }
 
-        &-div {
-            display: flex;
-            width: 400px;
-            height: 150px;
-            margin-bottom: 60px;
-            box-shadow: 5px 8px 25px darksalmon;
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            transition: all 0.3s;
 
-            &:nth-child(1) {
-                box-shadow: 0px 0px 10px 2px darkmagenta;
-            }
-
-            &:nth-child(2) {
-                box-shadow: 0px 0px 10px 2px darkcyan;
-            }
-
-            &:nth-child(3) {
-                box-shadow: 0px 0px 10px 2px darkblue;
-            }
-
-            &:nth-child(4) {
-                box-shadow: 0px 0px 10px 2px darkgoldenrod;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                opacity: .8;
-                transition: all 0.3s;
-                &:hover {
-                    opacity: 1;
-                }
+            &:hover {
+                opacity: 1;
             }
         }
     }
+}
 
 
 @media screen and (min-width: 760px) {
@@ -453,14 +457,14 @@ body {
             &:nth-child(2) {
                 &:hover {
                     opacity: 1;
-                    box-shadow: 0px 0px 50px 2px darkcyan;
+                    box-shadow: 0px 0px 50px 2px red;
                 }
             }
 
             &:nth-child(3) {
                 &:hover {
                     opacity: 1;
-                    box-shadow: 0px 0px 50px 2px darkblue;
+                    box-shadow: 0px 0px 50px 2px darkcyan;
                 }
             }
 
@@ -485,7 +489,9 @@ body {
         width: 100%;
         color: #fff;
         font-size: 14px;
-
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
         p {
             margin-bottom: 0;
         }
