@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", cursive;
+}
+
+.contenedor-header {
+  background: url(../img/Banner-Esencial-Vacio.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  height: 75px;
+}
+.contenedor-header_div {
+  width: 48%;
+  height: 75px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 1%;
+}
+.contenedor-header_div a {
+  height: 70px;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 40pt;
+  color: rgb(255, 160, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-header_div a img {
+  margin-right: 1rem;
+  border-color: silver;
+  border-style: solid;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  vertical-align: top;
+}
+.contenedor-header_div:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkslategrey;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.footer p {
+  margin-bottom: 0;
+}
+.footer a {
+  text-decoration: none;
+  font-style: italic;
+  color: rgb(80, 239, 183);
+}
+
+.contact {
+  position: relative;
+  min-height: 80vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../img/deco-crochet1.jpg) no-repeat 0 50%;
+  background-size: cover;
+  opacity: 0.5;
+}
+.contact .content {
+  max-width: 500px;
+  text-align: center;
+}
+.contact .content h2 {
+  font-size: 36px;
+  font-style: 500;
+  color: white;
+}
+.contact .content p {
+  font-weight: 300;
+  color: white;
+}
+.contact .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.contact .container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .container .contactInfo .box {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 30px 0;
+  display: flex;
+  left: 20%;
+}
+.contact .container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.contact .container .contactInfo .box .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-size: 16px;
+  color: white;
+  font-weight: 300;
+}
+.contact .container .contactInfo .box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+.contact .container .contactForm {
+  width: 40%;
+  padding: 40px;
+  background-color: white;
+}
+.contact .container .contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 800;
+}
+.contact .container .contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contact .container .contactForm .inputBox input, .contact .container .contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  resize: none;
+}
+.contact .container .contactForm .inputBox input:focus ~ span, .contact .container .contactForm .inputBox textarea:focus ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contact .container .contactForm .inputBox input:valid ~ span, .contact .container .contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contact .container .contactForm .inputBox input[type=submit] {
+  width: 100px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.contact .container .contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: grey;
+}
+
+@media screen and (max-width: 970px) {
+  .contact {
+    padding: 50px;
+  }
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container .contactInfo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .contact .container .contactForm {
+    width: 100%;
+  }
+  .contenedor-header_div {
+    width: 45%;
+    height: 8vh;
+  }
+  .contenedor-header_div a {
+    font-size: 24pt;
+  }
+  .contenedor-header_div a img {
+    margin-right: 0.5rem;
+  }
+}/*# sourceMappingURL=contact-us.css.map */

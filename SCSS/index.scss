@@ -69,7 +69,7 @@ body {
     .grid-index {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 60px auto auto max-content auto;
+        grid-template-rows: 8vh auto auto max-content auto;
         grid-template-areas:
             "header"
             "menu-nav"
@@ -83,15 +83,14 @@ body {
         background: url(../img/Banner-Esencial-Vacio.png);
         background-size: cover;
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+        justify-content: center;
         z-index: 2;
         position: sticky;
         top: 0;
 
         &_div {
-            width: 100%;
-            height: 60px;
+            width: 45%;
+            height: 8vh;
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -102,30 +101,32 @@ body {
                 font-family: 'Dancing Script', cursive;
                 font-size: 24pt;
                 color: rgb(255, 160, 150);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-right: .5rem;
+                    border-color: silver; //rgb(255, 160, 150)
+                    border-style: solid;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
             }
 
-            img {
-                margin-right: 0;
-                border-color: silver; //rgb(255, 160, 150)
-                border-style: solid;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                vertical-align: top;
-            }
         }
 
     }
 
     .contenedor-nav {
         grid-area: menu-nav;
-        height: 90px;
+        height: auto;
         background-color: whitesmoke;
         display: flex;
         justify-content: center;
         align-items: center;
         position: sticky;
-        top: 60px;
+        top: 8vh;
         border-bottom-style: solid;
         border-color: rgb(217, 112, 112);
         z-index: 2;
@@ -194,10 +195,11 @@ body {
         }
     }
 
-    .carousel-item {
-        img {
-            height: 260px;
-        }
+    #carouselExampleFade {
+        margin-top: 10px;
+        width: 80%;
+        left: 10%;
+        z-index: 0;
     }
 }
 
@@ -223,9 +225,7 @@ body {
     }
 }
 
-#carouselExampleFade {
-    display: flex;
-}
+
 
 .categorias {
     display: flex;
@@ -296,9 +296,9 @@ body {
         z-index: 1;
         position: sticky;
         top: 0;
-
         &_div {
-            width: 100%;
+            width: 48%;
+            height: 75px;
             transition: all 0.3s;
             display: flex;
             justify-content: center;
@@ -308,22 +308,24 @@ body {
 
             a {
                 height: 70px;
-                ;
                 text-decoration: none;
                 font-family: 'Dancing Script', cursive;
                 font-size: 40pt;
                 color: rgb(255, 160, 150);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-right: 1rem;
+                    border-color: silver; //rgb(255, 160, 150)
+                    border-style: solid;
+                    width: 60px;
+                    border-radius: 50%;
+                    height: 60px;
+                    vertical-align: top;
+                }
             }
 
-            img {
-                margin-right: 1rem;
-                border-color: silver; //rgb(255, 160, 150)
-                border-style: solid;
-                width: 70px;
-                border-radius: 50%;
-                height: 70px;
-                vertical-align: top;
-            }
 
             &:hover {
                 transform: scale(1.1);
@@ -380,6 +382,7 @@ body {
 
 
     #carouselExampleFade {
+        margin-top: 10px;
         width: 80%;
         left: 10%;
         z-index: 0;

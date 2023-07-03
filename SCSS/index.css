@@ -62,7 +62,7 @@ body {
   .grid-index {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px auto auto max-content auto;
+    grid-template-rows: 8vh auto auto max-content auto;
     grid-template-areas: "header" "menu-nav" "banner" "destacados" "footer";
   }
   .contenedor-header {
@@ -70,15 +70,14 @@ body {
     background: url(../img/Banner-Esencial-Vacio.png);
     background-size: cover;
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: center;
     z-index: 2;
     position: sticky;
     top: 0;
   }
   .contenedor-header_div {
-    width: 100%;
-    height: 60px;
+    width: 45%;
+    height: 8vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -89,25 +88,27 @@ body {
     font-family: "Dancing Script", cursive;
     font-size: 24pt;
     color: rgb(255, 160, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .contenedor-header_div img {
-    margin-right: 0;
+  .contenedor-header_div a img {
+    margin-right: 0.5rem;
     border-color: silver;
     border-style: solid;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    vertical-align: top;
   }
   .contenedor-nav {
     grid-area: menu-nav;
-    height: 90px;
+    height: auto;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 60px;
+    top: 8vh;
     border-bottom-style: solid;
     border-color: rgb(217, 112, 112);
     z-index: 2;
@@ -168,8 +169,11 @@ body {
   .destacados_div img:hover {
     opacity: 0.5;
   }
-  .carousel-item img {
-    height: 260px;
+  #carouselExampleFade {
+    margin-top: 10px;
+    width: 80%;
+    left: 10%;
+    z-index: 0;
   }
 }
 .footer {
@@ -190,10 +194,6 @@ body {
   text-decoration: none;
   font-style: italic;
   color: rgb(80, 239, 183);
-}
-
-#carouselExampleFade {
-  display: flex;
 }
 
 .categorias {
@@ -252,7 +252,8 @@ body {
     top: 0;
   }
   .contenedor-header_div {
-    width: 100%;
+    width: 48%;
+    height: 75px;
     transition: all 0.3s;
     display: flex;
     justify-content: center;
@@ -266,14 +267,17 @@ body {
     font-family: "Dancing Script", cursive;
     font-size: 40pt;
     color: rgb(255, 160, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .contenedor-header_div img {
+  .contenedor-header_div a img {
     margin-right: 1rem;
     border-color: silver;
     border-style: solid;
-    width: 70px;
+    width: 60px;
     border-radius: 50%;
-    height: 70px;
+    height: 60px;
     vertical-align: top;
   }
   .contenedor-header_div:hover {
@@ -321,6 +325,7 @@ body {
     color: rgb(255, 160, 150);
   }
   #carouselExampleFade {
+    margin-top: 10px;
     width: 80%;
     left: 10%;
     z-index: 0;
