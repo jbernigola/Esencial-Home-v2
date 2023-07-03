@@ -236,7 +236,7 @@ body {
   .grid-index {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px auto auto auto 15vh;
+    grid-template-rows: 75px auto auto auto auto;
     grid-template-areas: "header     header" "menu-nav   menu-nav" "banner     banner" "destacados destacados" "footer     footer";
   }
   .contenedor-header {
