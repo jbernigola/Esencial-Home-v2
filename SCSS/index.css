@@ -208,7 +208,7 @@ body {
   }
   .catalogo-div {
     flex-direction: column;
-    width: 60%;
+    width: 0%;
     max-height: none;
     padding: 10px;
   }
