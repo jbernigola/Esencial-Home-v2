@@ -208,14 +208,13 @@ body {
   }
   .catalogo-div {
     flex-direction: column;
-    width: -moz-min-content;
-    width: min-content;
+    width: 60%;
     max-height: none;
     padding: 10px;
   }
   .catalogo-div img {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin-top: 20px;
   }
   .catalogo-div h2 {
