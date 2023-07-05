@@ -162,8 +162,9 @@
 }
 .contact .container .contactForm {
   z-index: 1;
-  width: 40%;
-  max-width: 400px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 400px;
   padding: 40px;
   background-color: white;
   margin-top: 20px;
@@ -243,12 +244,16 @@
     align-items: center;
   }
   .contact .container .contactInfo .box {
-    padding: 10px;
+    padding-inline: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
     left: 0;
+    justify-content: flex-start;
   }
   .contact .container .contactForm {
     max-width: 500px;
+    min-width: 300px;
     width: 100%;
   }
   .contenedor-header_div {
