@@ -135,8 +135,12 @@ body {
     padding-inline: 0;
     font-size: 12px;
   }
+  .contactButton {
+    margin: 5px;
+    padding: 10px;
+  }
   .contactButton button {
-    width: 50%;
+    width: 75%;
     border-radius: 75%;
   }
   .grid-index {
