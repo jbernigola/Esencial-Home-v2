@@ -64,9 +64,48 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  padding: 10px;
   font-size: 18px;
   border-radius: 75%;
+  padding: 15px;
+}
+.contactButton button a {
+  width: 100%;
+  text-decoration: none;
+  font-family: "Montserrat" cursive;
+  font-weight: 700;
+  color: white;
+}
+
+.buyButton {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  right: 0;
+  width: 100%;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  padding: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.buyButton button {
+  width: 20%;
+  min-width: 200px;
+  background-color: #06434b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 15px;
+  margin-right: 20px;
+}
+.buyButton button a {
+  width: 100%;
+  text-decoration: none;
+  font-family: "Montserrat" cursive;
+  font-weight: 700;
+  color: white;
 }
 
 .about-us {
@@ -113,7 +152,86 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 800px) {
+.catalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  min-height: 80vh;
+  flex-direction: column;
+}
+.catalogo-div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  max-height: 60vh;
+  margin: 20px;
+  padding: 2%;
+  width: 1000px;
+}
+.catalogo-div img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: silver;
+  border-width: 5px;
+  margin: 20px;
+}
+.catalogo-div h2 {
+  margin: 20px;
+  width: 100%;
+  text-align: left !important;
+  font-weight: 700;
+  font-family: "Montserrat", cursive;
+}
+.catalogo-div p {
+  margin: 20px;
+  font-size: 14pt;
+  font-family: "Montserrat", cursive;
+  text-align: justify;
+  text-indent: 1.5rem;
+}
+
+@media (min-width: 800px) and (max-width: 1300px) {
+  .catalogo-div {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .catalogo {
+    width: 90%;
+    left: 5%;
+  }
+  .catalogo-div {
+    flex-direction: column;
+    width: -moz-min-content;
+    width: min-content;
+    max-height: none;
+  }
+  .catalogo-div img {
+    width: 400px;
+    height: 350px;
+    margin-top: 45px;
+  }
+  .catalogo-div h2 {
+    font-size: 16pt;
+    padding-inline: 15px;
+  }
+  .catalogo-div p {
+    font-size: 12pt;
+    padding-inline: 15px;
+  }
+  .catalogo-div .buyButton {
+    margin: 0;
+    padding: 0;
+  }
   .about-us-div {
     width: 90%;
     position: relative;
@@ -207,7 +325,7 @@ body {
   }
   .contenedor-nav_menu li a {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: Montserrat, cursive;
     text-decoration: none;
     transition: all 0.3s;
@@ -253,13 +371,7 @@ body {
   .categorias-div {
     display: flex;
     width: 80%;
-  }
-  .categorias-div:nth-child(even) {
-    box-shadow: 0px 0px 10px 2px darkgreen;
-    margin-bottom: 40px;
-  }
-  .categorias-div:nth-child(odd) {
-    box-shadow: 0px 0px 10px 2px darkgoldenrod;
+    box-shadow: 0px 0px 5px 2px darkcyan;
     margin-bottom: 40px;
   }
   .categorias-div img {
@@ -270,7 +382,7 @@ body {
        object-fit: cover;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   .grid-index {
     display: grid;
     grid-template-columns: 1fr;
