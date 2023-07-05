@@ -173,8 +173,14 @@
                         font-weight: 700;
                         color: whitesmoke;
                         text-shadow: 2px 2px 2px black;
-
                     }
+                    a{
+                        font-weight: 700;
+                        color: whitesmoke;
+                        text-shadow: 2px 2px 2px black;
+                        text-decoration: none;
+                    }
+
 
                 }
             }
@@ -202,17 +208,19 @@
                 width: 100%;
                 margin-top: 10px;
 
-                textarea{
+                textarea {
                     min-height: 125px;
+
                     &:valid~span {
                         display: none;
                     }
+
                     &:focus~span {
                         display: none;
                     }
                 }
 
-                input{
+                input {
 
 
                     &:valid~span {
@@ -220,6 +228,7 @@
                         font-size: 12px;
                         transform: translateY(-20px);
                     }
+
                     &:focus~span {
                         color: #e91e6286;
                         font-size: 12px;
@@ -227,6 +236,7 @@
                         transform: translateY(-20px);
                     }
                 }
+
                 input,
                 textarea {
                     width: 100%;
@@ -301,7 +311,7 @@
 
     .contenedor-header {
         &_div {
-            width: 45%;
+            width: 60%;
             height: 8vh;
 
             a {

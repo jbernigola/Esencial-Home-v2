@@ -160,6 +160,12 @@
   color: whitesmoke;
   text-shadow: 2px 2px 2px black;
 }
+.contact .container .contactInfo .box .text a {
+  font-weight: 700;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+}
 .contact .container .contactForm {
   z-index: 1;
   width: 50%;
@@ -257,7 +263,7 @@
     width: 100%;
   }
   .contenedor-header_div {
-    width: 45%;
+    width: 60%;
     height: 8vh;
   }
   .contenedor-header_div a {
