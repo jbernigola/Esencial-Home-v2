@@ -61,6 +61,8 @@
   font-size: 14px;
   padding: 0 !important;
   margin: 0 !important;
+  border-top-style: solid;
+  border-color: black;
 }
 .footer p {
   margin-bottom: 0;
@@ -71,7 +73,22 @@
   color: rgb(80, 239, 183);
 }
 
+.img-area {
+  background-image: url(../img/deco-crochet1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 99%;
+  position: absolute;
+  width: 100%;
+  border-top: #e91e63;
+  border-top-style: solid;
+  filter: blur(2px);
+  z-index: 0;
+}
+
 .contact {
+  z-index: 1;
   position: relative;
   min-height: 80vh;
   padding: 50px 100px;
@@ -79,12 +96,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url(../img/deco-crochet1.jpg) no-repeat 0 50%;
-  background-size: cover;
 }
 .contact .content {
   max-width: 500px;
   text-align: center;
+  z-index: 1;
 }
 .contact .content h2 {
   font-size: 36px;
@@ -100,7 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .contact .container .contactInfo {
   width: 50%;
@@ -111,9 +127,9 @@
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 30px 0;
+  padding: 40px 0;
   display: flex;
-  left: 20%;
+  left: 30%;
 }
 .contact .container .contactInfo .box .icon {
   min-width: 60px;
@@ -130,17 +146,20 @@
   flex-direction: column;
   margin-left: 20px;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: 300;
 }
-.contact .container .contactInfo .box .text h3 {
+.contact .container .contactInfo .box .text h2 {
+  font-size: 20pt;
   font-weight: 500;
-  color: #00bcd4;
+  color: rgb(0, 173, 212);
 }
 .contact .container .contactForm {
+  z-index: 1;
   width: 40%;
   padding: 40px;
   background-color: white;
+  margin-top: 20px;
 }
 .contact .container .contactForm h2 {
   font-size: 30px;
@@ -152,7 +171,8 @@
   width: 100%;
   margin-top: 10px;
 }
-.contact .container .contactForm .inputBox input, .contact .container .contactForm .inputBox textarea {
+.contact .container .contactForm .inputBox input,
+.contact .container .contactForm .inputBox textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 16px;
@@ -162,12 +182,14 @@
   outline: none;
   resize: none;
 }
-.contact .container .contactForm .inputBox input:focus ~ span, .contact .container .contactForm .inputBox textarea:focus ~ span {
+.contact .container .contactForm .inputBox input:focus ~ span,
+.contact .container .contactForm .inputBox textarea:focus ~ span {
   color: #e91e63;
   font-size: 12px;
   transform: translateY(-20px);
 }
-.contact .container .contactForm .inputBox input:valid ~ span, .contact .container .contactForm .inputBox textarea:valid ~ span {
+.contact .container .contactForm .inputBox input:valid ~ span,
+.contact .container .contactForm .inputBox textarea:valid ~ span {
   color: #e91e63;
   font-size: 12px;
   transform: translateY(-20px);
@@ -202,6 +224,9 @@
   .contact .container .contactInfo {
     width: 100%;
     margin-bottom: 40px;
+  }
+  .contact .container .contactInfo .box {
+    padding: 10px;
   }
   .contact .container .contactForm {
     width: 100%;

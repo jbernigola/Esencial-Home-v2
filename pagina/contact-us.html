@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Contact Us Page</title>
+    <title>Esencial Home | Contactáctanos</title>
+    <link rel="shortcut icon" href="../img/Esencial-Logo.png">
 
 
     <!--Montserrat-->
@@ -44,10 +45,10 @@
     </header>
 
     <section class="contact">
+        <div class="img-area"></div>
         <div class="content">
             <h2>¡Contáctanos!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem molestiae velit neque quia non enim
-                pariatur amet nihil suscipit.</p>
+            <p>Adelante! Puedes contactarnos vía email por cualquier consulta. Estamos a disposición!</p>
         </div>
         <div class="container">
             <div class="contactInfo">
@@ -56,7 +57,7 @@
                         location_on
                     </span>
                     <div class="text">
-                        <h3>Direccion</h3>
+                        <h2>Direccion</h2>
                         <p>
                             Av. Siempreviva 742 <br>
                             Springfield, Estados Unidos.
@@ -68,7 +69,7 @@
                         call
                     </span>
                     <div class="text">
-                        <h3>Telefono/Celular</h3>
+                        <h2>Telefono/Celular</h2>
                         <p>
                             +54 9 11 6972-2947
                         </p>
@@ -79,7 +80,7 @@
                         mail
                     </span>
                     <div class="text">
-                        <h3>Email</h3>
+                        <h2>Email</h2>
                         <p>
                             esencialhome@gmail.com
                         </p>
@@ -87,18 +88,21 @@
                 </div>
             </div>
             <div class="contactForm">
-                <form>
+                <form
+                    action="https://formspree.io/f/xjvqvbgg"
+                    method="post"
+                >
                     <h2>Escríbenos!</h2>
                     <div class="inputBox">
                         <input type="text" name="" required="required">
                         <span>Nombre completo</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="text" name="email" required="required">
                         <span>Email</span>
                     </div>
                     <div class="inputBox">
-                        <textarea name="" required="required"></textarea>
+                        <textarea name="message" required="required"></textarea>
                         <span>Mensaje</span>
                     </div>
                     <div class="inputBox">

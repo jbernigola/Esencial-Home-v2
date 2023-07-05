@@ -2,6 +2,18 @@ body {
   background-image: linear-gradient(to top, #c4a6ee 0%, #fbc2eb 100%);
 }
 
+#coleccion-cm {
+  background-image: linear-gradient(to top, rgb(247, 221, 158) 0%, #bfe2d6 100%);
+}
+
+#coleccion-se {
+  background-image: linear-gradient(to top, #d5ca7b 30%, #b7e1ff 100%);
+}
+
+#coleccion-pm {
+  background-image: linear-gradient(to top, #a1d490 0%, #f9ebbd 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,32 +50,83 @@ body {
      object-fit: contain;
 }
 
-.categorias {
+.contactButton {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  flex-direction: column;
-}
-.categorias-div {
-  display: flex;
-  justify-content: flex-start;
-  width: 750px;
-  height: auto;
-  margin-bottom: 50px;
-  box-shadow: 5px 8px 25px darksalmon;
-}
-.categorias-div img {
+  position: relative;
   width: 100%;
-  height: 100%;
+  margin-top: 10px;
+}
+.contactButton button {
+  width: 30%;
+  background-color: #1a9cad;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
 }
 
-@media screen and (max-width: 760px) {
+.about-us {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  margin-top: 10px;
+  padding: 15px;
+}
+.about-us-div {
+  display: flex;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  padding: 20px;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about-us-div h3 {
+  margin: 1rem 0;
+  font-family: "Montserrat" cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.about-us-div h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Montserrat" cursive;
+  margin-inline: 1rem;
+}
+.about-us-div p {
+  font-family: "Montserrat", cursive;
+  text-align: justify;
+  padding-inline: 1rem;
+  font-size: 20px;
+  line-height: 1.5;
+  text-indent: 2.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .about-us h3 {
+    font-size: 35px;
+  }
+  .about-us p {
+    font-size: 16px;
+  }
+  .contactButton button {
+    width: 50%;
+  }
   .grid-index {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 8vh auto auto max-content auto;
-    grid-template-areas: "header" "menu-nav" "banner" "destacados" "footer";
+    grid-template-areas: "header" "menu-nav" "banner" "about" "footer";
   }
   .contenedor-header {
     grid-area: header;
@@ -171,73 +234,62 @@ body {
   }
   #carouselExampleFade {
     margin-top: 10px;
-    width: 80%;
-    left: 10%;
+    width: 90%;
+    left: 5%;
     z-index: 0;
   }
+  .footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkslategrey;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    border-top-style: solid;
+    border-color: black;
+  }
+  .footer p {
+    margin-bottom: 0;
+  }
+  .footer a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(80, 239, 183);
+  }
+  .categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    flex-direction: column;
+  }
+  .categorias-div {
+    display: flex;
+    width: 400px;
+    height: 200px;
+    margin-bottom: 60px;
+  }
+  .categorias-div:nth-child(even) {
+    box-shadow: 0px 0px 10px 2px darkgreen;
+  }
+  .categorias-div:nth-child(odd) {
+    box-shadow: 0px 0px 10px 2px darkgoldenrod;
+  }
+  .categorias-div img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
 }
-.footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: darkslategrey;
-  color: #fff;
-  font-size: 14px;
-  width: 100%;
-}
-.footer p {
-  margin-bottom: 0;
-}
-.footer a {
-  text-decoration: none;
-  font-style: italic;
-  color: rgb(80, 239, 183);
-}
-
-.categorias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  flex-direction: column;
-}
-.categorias-div {
-  display: flex;
-  width: 400px;
-  height: 150px;
-  margin-bottom: 60px;
-  box-shadow: 5px 8px 25px darksalmon;
-}
-.categorias-div:nth-child(1) {
-  box-shadow: 0px 0px 10px 2px darkmagenta;
-}
-.categorias-div:nth-child(2) {
-  box-shadow: 0px 0px 10px 2px darkcyan;
-}
-.categorias-div:nth-child(3) {
-  box-shadow: 0px 0px 10px 2px rgb(162, 215, 222);
-}
-.categorias-div:nth-child(4) {
-  box-shadow: 0px 0px 10px 2px darkgoldenrod;
-}
-.categorias-div img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  transition: all 0.3s;
-}
-.categorias-div img:hover {
-  opacity: 1;
-}
-
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 800px) {
   .grid-index {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 75px auto auto auto auto;
-    grid-template-areas: "header     header" "menu-nav   menu-nav" "banner     banner" "destacados destacados" "footer     footer";
+    grid-template-areas: "header     header" "menu-nav   menu-nav" "banner     banner" "about      about" "footer     footer";
   }
   .contenedor-header {
     grid-area: header;
@@ -294,7 +346,9 @@ body {
     position: sticky;
     top: 75px;
     border-bottom-style: solid;
-    border-color: rgb(217, 112, 112);
+    border-color: #e91e63;
+    border-top: #e91e63;
+    border-top-style: solid;
     z-index: 2;
   }
   .contenedor-nav_menu {
@@ -326,8 +380,8 @@ body {
   }
   #carouselExampleFade {
     margin-top: 10px;
-    width: 80%;
-    left: 10%;
+    width: 90%;
+    left: 5%;
     z-index: 0;
   }
   .destacados {
@@ -386,19 +440,11 @@ body {
   .categorias-div img:hover {
     opacity: 1;
   }
-  .categorias-div:nth-child(1):hover {
+  .categorias-div:nth-child(odd):hover {
     opacity: 1;
-    box-shadow: 0px 0px 50px 2px darkmagenta;
+    box-shadow: 0px 0px 50px 2px darkgreen;
   }
-  .categorias-div:nth-child(2):hover {
-    opacity: 1;
-    box-shadow: 0px 0px 50px 2px red;
-  }
-  .categorias-div:nth-child(3):hover {
-    opacity: 1;
-    box-shadow: 0px 0px 50px 2px darkcyan;
-  }
-  .categorias-div:nth-child(4):hover {
+  .categorias-div:nth-child(even):hover {
     opacity: 1;
     box-shadow: 0px 0px 50px 2px darkgoldenrod;
   }
@@ -415,6 +461,8 @@ body {
     width: 100%;
     padding: 0 !important;
     margin: 0 !important;
+    border-top-style: solid;
+    border-color: black;
   }
   .footer p {
     margin-bottom: 0;
