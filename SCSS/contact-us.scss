@@ -79,12 +79,13 @@
         color: rgb(80, 239, 183)
     }
 }
-.img-area{
+
+.img-area {
     background-image: url(../img/deco-crochet1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 99%;
+    height: 100%;
     position: absolute;
     width: 100%;
     border-top: #e91e63;
@@ -107,17 +108,19 @@
     .content {
         max-width: 500px;
         text-align: center;
-        z-index: 1  ;
+        z-index: 1;
 
         h2 {
             font-size: 36px;
             font-style: 500;
             color: white;
+            text-shadow: 2px 2px 2px black;
         }
 
         p {
-            font-weight: 300;
+            font-weight: 700;
             color: white;
+            text-shadow: 2px 2px 2px black;
 
         }
     }
@@ -139,7 +142,7 @@
                 width: fit-content;
                 padding: 40px 0;
                 display: flex;
-                left: 30%;
+                left: 20%;
 
                 .icon {
                     min-width: 60px;
@@ -157,14 +160,22 @@
                     flex-direction: column;
                     margin-left: 20px;
                     font-size: 16px;
-                    color: rgb(255, 255, 255);
-                    font-weight: 300;
 
                     h2 {
                         font-size: 20pt;
                         font-weight: 500;
-                        color: rgb(0, 173, 212)
+                        color: rgb(0, 173, 212);
+                        text-shadow: 2px 2px 1px rgb(52, 52, 52);
+
                     }
+
+                    p {
+                        font-weight: 700;
+                        color: whitesmoke;
+                        text-shadow: 2px 2px 2px black;
+
+                    }
+
                 }
             }
         }
@@ -172,13 +183,17 @@
         .contactForm {
             z-index: 1;
             width: 40%;
+            max-width: 400px;
             padding: 40px;
             background-color: white;
             margin-top: 20px;
+
             h2 {
                 font-size: 30px;
-                color: #333;
+                color: #df7979;
                 font-weight: 800;
+                text-shadow: 1px 1px 2px rgb(0, 0, 0);
+
             }
 
             .inputBox {
@@ -186,6 +201,31 @@
                 width: 100%;
                 margin-top: 10px;
 
+                textarea{
+                    min-height: 125px;
+                    &:valid~span {
+                        display: none;
+                    }
+                    &:focus~span {
+                        display: none;
+                    }
+                }
+
+                input{
+
+
+                    &:valid~span {
+                        color: #e91e6286;
+                        font-size: 12px;
+                        transform: translateY(-20px);
+                    }
+                    &:focus~span {
+                        color: #e91e6286;
+                        font-size: 12px;
+                        font-weight: 900;
+                        transform: translateY(-20px);
+                    }
+                }
                 input,
                 textarea {
                     width: 100%;
@@ -193,21 +233,12 @@
                     font-size: 16px;
                     margin: 10px 0;
                     border: none;
-                    border-bottom: 2px solid black;
+                    border-bottom: 2px solid rgb(78, 77, 77);
                     outline: none;
                     resize: none;
 
-                    &:focus~span {
-                        color: #e91e63;
-                        font-size: 12px;
-                        transform: translateY(-20px);
-                    }
 
-                    &:valid~span {
-                        color: #e91e63;
-                        font-size: 12px;
-                        transform: translateY(-20px);
-                    }
+
                 }
 
                 input[type="submit"] {
@@ -247,12 +278,17 @@
             .contactInfo {
                 width: 100%;
                 margin-bottom: 40px;
-                .box{
+                align-items: center;
+
+                .box {
                     padding: 10px;
+                    position: relative;
+                    left: 0;
                 }
             }
 
             .contactForm {
+                max-width: 500px;
                 width: 100%;
             }
         }

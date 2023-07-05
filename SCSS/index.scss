@@ -251,41 +251,7 @@ body {
         }
     }
 
-    .destacados {
-        grid-area: destacados;
-        background-color: rgba(250, 223, 220, 0.579); //rgb(223, 182, 182);// rgb(172, 51, 51)
-        width: 80%;
-        position: relative;
-        left: 10%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
 
-        &_div {
-            width: fit-content;
-            display: flex;
-            flex-direction: row;
-
-            img {
-                transition: all 0.3s;
-                opacity: 1;
-                border-radius: 20% 10%;
-                width: 160px;
-                height: 160px;
-                margin-inline: 2rem;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-                border-color: silver;
-                border-style: solid;
-                border-width: lvw;
-
-                &:hover {
-                    opacity: 0.5;
-                }
-            }
-        }
-    }
 
 
     #carouselExampleFade {
@@ -331,9 +297,6 @@ body {
         &-div {
             display: flex;
             width: 80%;
-            height: 150px;
-
-
 
             &:nth-child(even) {
                 box-shadow: 0px 0px 10px 2px darkgreen;
@@ -351,7 +314,7 @@ body {
                 width: 100%;
                 height: 100%;
                 transition: all 0.3s;
-
+                object-fit: cover;
             }
         }
     }
@@ -481,41 +444,6 @@ body {
         z-index: 0;
     }
 
-    .destacados {
-        grid-area: destacados;
-        background-color: rgba(250, 223, 220, 0.579); //rgb(223, 182, 182);// rgb(172, 51, 51)
-        width: 80%;
-        position: relative;
-        left: 10%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        &_div {
-            width: 160px;
-            height: 160px;
-            display: flex;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            margin-inline: 1rem;
-
-            &-img {
-                transition: all 0.3s;
-                opacity: 1;
-                border-radius: 20% 10%;
-                width: 100%;
-                height: 100%;
-                border-color: silver;
-                border-style: solid;
-                border-width: .5mm;
-
-                &:hover {
-                    opacity: 0.5;
-                }
-            }
-        }
-    }
 
     .categorias {
         display: flex;

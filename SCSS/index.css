@@ -216,39 +216,6 @@ body {
   .contenedor-nav_menu li a:hover {
     color: rgb(255, 160, 150);
   }
-  .destacados {
-    grid-area: destacados;
-    background-color: rgba(250, 223, 220, 0.579);
-    width: 80%;
-    position: relative;
-    left: 10%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .destacados_div {
-    width: -moz-fit-content;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-  }
-  .destacados_div img {
-    transition: all 0.3s;
-    opacity: 1;
-    border-radius: 20% 10%;
-    width: 160px;
-    height: 160px;
-    margin-inline: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-color: silver;
-    border-style: solid;
-    border-width: lvw;
-  }
-  .destacados_div img:hover {
-    opacity: 0.5;
-  }
   #carouselExampleFade {
     margin-top: 10px;
     width: 90%;
@@ -286,7 +253,6 @@ body {
   .categorias-div {
     display: flex;
     width: 80%;
-    height: 150px;
   }
   .categorias-div:nth-child(even) {
     box-shadow: 0px 0px 10px 2px darkgreen;
@@ -300,6 +266,8 @@ body {
     width: 100%;
     height: 100%;
     transition: all 0.3s;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (min-width: 800px) {
@@ -401,38 +369,6 @@ body {
     width: 90%;
     left: 5%;
     z-index: 0;
-  }
-  .destacados {
-    grid-area: destacados;
-    background-color: rgba(250, 223, 220, 0.579);
-    width: 80%;
-    position: relative;
-    left: 10%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  .destacados_div {
-    width: 160px;
-    height: 160px;
-    display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-inline: 1rem;
-  }
-  .destacados_div-img {
-    transition: all 0.3s;
-    opacity: 1;
-    border-radius: 20% 10%;
-    width: 100%;
-    height: 100%;
-    border-color: silver;
-    border-style: solid;
-    border-width: 0.5mm;
-  }
-  .destacados_div-img:hover {
-    opacity: 0.5;
   }
   .categorias {
     display: flex;
