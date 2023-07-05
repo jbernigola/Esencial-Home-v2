@@ -195,7 +195,7 @@ body {
             border-color: silver;
             border-width: 5px;
             margin: 20px;
-
+            min-width: 250px;
         }
 
         h2 {
@@ -221,6 +221,9 @@ body {
     .catalogo {
         &-div {
             width: 800px;
+            .buyButton{
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -292,9 +295,16 @@ body {
     }
 
     .contactButton {
+        margin-inline: 0;
+        justify-content: center ;
         button {
-            width: 60%;
+            width: 80%;
+            max-width: 150px;
             border-radius: 75%;
+            font-size: 10pt;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
         }
     }
 
