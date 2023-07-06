@@ -440,11 +440,11 @@ body {
 
     .categorias {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 40px;
         flex-direction: column;
-
+        min-height: 66vh;
         &-div {
             display: flex;
             width: 80%;
